@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>事務ツール工房｜契約は、あとでいい。</title>
-<meta name="description" content="磐田の材木屋が自社で毎日使っている事務効率化ツールを、近隣の中小企業にも。先に作って持っていきます。触ってみて、使えそうなら購入。合わなければ0円。">
+<meta name="description" content="その事務作業、効率化しませんか。静岡県西部の中小企業向け。先に作って持っていきます。触ってみて、使えそうなら購入。合わなければ0円。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232e5339'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3E事%3C/text%3E%3C/svg%3E">
 <style>
   :root{
@@ -20,7 +20,8 @@
   .logo{font-weight:bold;font-size:1.05rem;letter-spacing:.05em;}
   .logo small{font-weight:normal;opacity:.8;margin-left:8px;font-size:.75rem;}
 
-  .hero{background:linear-gradient(175deg,var(--green) 55%,var(--green-dark));color:#fff;padding:56px 0 48px;}
+  .hero{background:linear-gradient(175deg,var(--green) 55%,var(--green-dark));color:#fff;padding:52px 0 48px;}
+  .hero .eyebrow{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 16px;font-size:.9rem;margin-bottom:16px;}
   .hero h1{font-size:2rem;line-height:1.4;letter-spacing:.04em;margin-bottom:18px;}
   .hero p.lead{font-size:1.05rem;opacity:.95;margin-bottom:10px;}
   .hero p.sub{font-size:.9rem;opacity:.75;}
@@ -30,6 +31,11 @@
   section:nth-of-type(even){background:#fff;}
   h2{font-size:1.4rem;color:var(--green-dark);margin-bottom:6px;padding-left:12px;border-left:6px solid var(--green);}
   .h2sub{color:var(--muted);font-size:.9rem;margin-bottom:24px;padding-left:18px;}
+
+  .pains{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px;}
+  @media(max-width:560px){.pains{grid-template-columns:1fr;}}
+  .pain{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.95rem;position:relative;padding-left:38px;}
+  .pain::before{content:"☑";position:absolute;left:12px;color:var(--accent);font-weight:bold;}
 
   .steps{display:grid;gap:14px;margin-top:10px;}
   .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 18px 18px 62px;position:relative;}
@@ -45,7 +51,15 @@
   section:nth-of-type(even) .card{background:var(--bg);}
   .card b{display:block;color:var(--green-dark);margin-bottom:4px;font-size:1rem;}
   .card p{font-size:.87rem;color:var(--muted);}
-  .proof{margin-top:18px;background:var(--green);color:#fff;border-radius:12px;padding:16px 18px;font-size:.95rem;}
+
+  .work{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px;}
+  section:nth-of-type(even) .work{background:var(--bg);}
+  .work .tag{display:inline-block;background:var(--wood);color:#fff;font-size:.72rem;border-radius:4px;padding:2px 8px;margin-bottom:6px;letter-spacing:.05em;}
+  .work b{display:block;color:var(--green-dark);font-size:1.02rem;margin-bottom:4px;}
+  .work .ba{font-size:.9rem;}
+  .work .ba .before{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--accent);margin-right:8px;}
+  .work .ba .after{font-weight:bold;color:var(--green-dark);}
+  .work p.desc{font-size:.85rem;color:var(--muted);margin-top:4px;}
 
   table.price{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:.92rem;}
   table.price th,table.price td{border:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top;}
@@ -80,43 +94,84 @@
   .alt-box a.telbtn{display:inline-block;margin-top:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:bold;padding:10px 22px;border-radius:999px;}
 
   footer{background:var(--green-dark);color:#fff;padding:30px 0;font-size:.85rem;line-height:2;}
-  footer a{color:#fff;}
 </style>
 </head>
 <body>
 
-<header class="site"><div class="wrap"><span class="logo">事務ツール工房<small>by 株式会社林材木店（磐田市）</small></span></div></header>
+<header class="site"><div class="wrap"><span class="logo">事務ツール工房<small>静岡県磐田市｜林 大樹</small></span></div></header>
 
 <div class="hero"><div class="wrap">
+  <span class="eyebrow">その事務作業、効率化しませんか？</span>
   <h1>契約は、<br>あとでいい。</h1>
   <p class="lead">先に作って持っていきます。触ってみて、使えそうなら購入。<br><strong>合わなければ 0円</strong>で終わりです。</p>
-  <p class="sub">磐田の材木屋が、自分の会社のために作って毎日使っている事務効率化ツールを、近隣の会社にもお分けします。</p>
+  <p class="sub">実家の材木店の事務と現場を自分でツール化して回している者が、同じものを近隣の会社にもお届けする個人サービスです。</p>
   <a class="cta" href="#form">困りごとを送る（1分）</a>
 </div></div>
+
+<section><div class="wrap">
+  <h2>こんな事務作業、ありませんか</h2>
+  <p class="h2sub">1つでも当てはまったら、たぶんお役に立てます。</p>
+  <div class="pains">
+    <div class="pain">月末の請求書づくりに丸1日以上かかる</div>
+    <div class="pain">FAXで届いた注文をExcelに打ち直している</div>
+    <div class="pain">棚卸が紙と電卓のまま</div>
+    <div class="pain">同じ数字を納品書・請求書・売上表に3回書いている</div>
+    <div class="pain">現場の記録が手書き→あとで打ち直し</div>
+    <div class="pain">支払や提出物の期日をうっかり忘れる</div>
+  </div>
+</div></section>
 
 <section><div class="wrap">
   <h2>ながれ</h2>
   <p class="h2sub">訪問営業も、分厚い見積書もありません。</p>
   <div class="steps">
-    <div class="step"><span class="num">1</span><b>困りごとを送る <span class="free">（1分・無料）</span></b><p>下のフォームかLINEで「請求書づくりが大変」「棚卸が紙のまま」など、一言で大丈夫です。</p></div>
+    <div class="step"><span class="num">1</span><b>困りごとを送る <span class="free">（1分・無料）</span></b><p>下のフォームかLINEで「請求書づくりが大変」など、一言で大丈夫です。</p></div>
     <div class="step"><span class="num">2</span><b>こちらで作ります <span class="free">（無料）</span></b><p>お話を聞いて、実際に動くものを作ってお見せします。パンフレットではなく実物です。</p></div>
     <div class="step"><span class="num">3</span><b>1ヶ月ためす <span class="free">（無料・調整2回まで）</span></b><p>実際の業務で使ってみてください。合わなければそのまま終了、費用はかかりません。</p></div>
     <div class="step"><span class="num">4</span><b>気に入ったら購入</b><p>使えそうだと思ってから、はじめて契約とお支払いです。</p></div>
   </div>
 </div></section>
 
+<section id="works"><div class="wrap">
+  <h2>実績（ぜんぶ実際に毎日動いています）</h2>
+  <p class="h2sub">実家の株式会社林材木店（磐田市・木材加工卸）のために作り、現場で稼働中のツールの一部です。ご希望があれば実物の画面をお見せします。</p>
+
+  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>転記ゼロ化（納品書→請求書→売上帳）</b>
+    <div class="ba"><span class="before">月末の請求書作業 まる2日</span><span class="after">→ 約30分</span></div>
+    <p class="desc">納品書を1回入力すれば、月次請求書の発行も売上帳への記帳も自動。繰越にも対応。</p></div>
+
+  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>スマホ棚卸ツール</b>
+    <div class="ba"><span class="before">紙に書く→電卓→Excelに打ち直し</span><span class="after">→ その場でスマホ入力・集計まで自動</span></div>
+    <p class="desc">ボタンを押していくだけの入力。2人で数えて自動照合、数え間違いも見つかります。</p></div>
+
+  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>FAX注文の自動取込</b>
+    <div class="ba"><span class="before">届いたFAXを見ながら手で転記</span><span class="after">→ 自動で読み取って注文一覧へ</span></div>
+    <p class="desc">受信FAXを機械が監視してAIが読み取り。人は確認するだけ。</p></div>
+
+  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>毎朝の自動日報</b>
+    <div class="ba"><span class="before">売上や在庫を聞かないと分からない</span><span class="after">→ 毎朝LINEに自動で届く</span></div>
+    <p class="desc">EC・市場の売上、在庫、入金予定を毎朝決まった時間に自動集計して通知。</p></div>
+
+  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>設定ミスの見張り番</b>
+    <div class="ba"><span class="before">送料設定のミスに誰も気づかない</span><span class="after">→ 毎朝自動チェック、ズレたら警報</span></div>
+    <p class="desc">ネットショップの送料設定・案内文言を機械が毎朝照合。異常時だけ通知します。</p></div>
+
+  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>受領印返送の自動化</b>
+    <div class="ba"><span class="before">FAXを印刷→押印→FAX送信</span><span class="after">→ スマホで承認するだけ</span></div>
+    <p class="desc">請求書FAXを検知して受領印を合成、LINEで承認したら自動返送。</p></div>
+</div></section>
+
 <section><div class="wrap">
   <h2>できること</h2>
-  <p class="h2sub">ぜんぶ、自社（材木店）で毎日実際に使っているものです。</p>
+  <p class="h2sub">上の実績と同じ仕組みを、御社の業務に合わせて作ります。</p>
   <div class="cards">
     <div class="card"><b>紙・FAXをデータにする</b><p>FAXで届く注文や納品書を、打ち直しせずに一覧表へ。</p></div>
-    <div class="card"><b>転記をなくす</b><p>1回入力すれば、納品書も請求書も売上集計もぜんぶ出ます。月末の請求書作業が2日→30分に。</p></div>
-    <div class="card"><b>現場をスマホで記録</b><p>棚卸・作業日報・点検を、その場でスマホ入力→自動集計。紙をExcelに打ち直す仕事が消えます。</p></div>
-    <div class="card"><b>数字を毎朝1画面に</b><p>売上や在庫が毎朝自動でLINE・メールに届く。聞かなくても分かる状態に。</p></div>
+    <div class="card"><b>転記をなくす</b><p>1回入力すれば、納品書も請求書も売上集計もぜんぶ出ます。</p></div>
+    <div class="card"><b>現場をスマホで記録</b><p>棚卸・作業日報・点検を、その場でスマホ入力→自動集計。</p></div>
+    <div class="card"><b>数字を毎朝1画面に</b><p>売上や在庫が毎朝自動でLINE・メールに届きます。</p></div>
     <div class="card"><b>期日の見張り番</b><p>支払・更新・提出物のうっかり忘れを、機械が見張って知らせます。</p></div>
     <div class="card"><b>Excel・ホームページ作成</b><p>ぐちゃぐちゃのExcelの整備や、古くなったホームページの作り直しも。</p></div>
   </div>
-  <div class="proof">🌲 材木店の現場と事務所で毎日動いている実物を、そのままお見せできます。「うちの場合はこういうことできる？」もお気軽に。</div>
 </div></section>
 
 <section><div class="wrap">
@@ -141,7 +196,7 @@
     <li>最初から100点のシステムはありません。<b>70点でお渡しして、使いながら90点に育てる</b>やり方です。そのための無料試用と調整です。</li>
     <li>最初の1回は、いまのやり方（紙など）と並走してください。合っていることをご自分の目で確かめてから切り替えるのが安全です。</li>
     <li>自動化やAIは「下書き」までです。<b>最終確認は必ず人が行う</b>設計にしています。勝手に確定しません。</li>
-    <li>本業（材木店）と並行のため、対応が翌日以降になることがあります。「止まると今日困る」業務はお受けしていません。</li>
+    <li>本業と並行の個人サービスのため、対応が翌日以降になることがあります。「止まると今日困る」業務はお受けしていません。</li>
   </ul>
 </div></section>
 
@@ -183,14 +238,14 @@
 
   <div class="alt">
     <div class="alt-box"><b>LINEのほうが楽な方</b><img src="assets/qr-line.png" alt="LINE友だち追加QR"><a href="https://lin.ee/tGamtbg">友だち追加して話す</a></div>
-    <div class="alt-box"><b>電話のほうが早い方</b><p style="margin-top:8px;">平日 8:00〜16:00</p><a class="telbtn" href="tel:0538-58-2395">0538-58-2395</a><p style="margin-top:8px;color:var(--muted);font-size:.8rem;">「事務ツールの件で」とお伝えください</p></div>
+    <div class="alt-box"><b>電話のほうが早い方</b><p style="margin-top:8px;">平日 8:00〜16:00</p><a class="telbtn" href="tel:0538-58-2395">0538-58-2395</a><p style="margin-top:8px;color:var(--muted);font-size:.8rem;">林材木店の番号につながります。<br>「事務ツールの件で」とお伝えください</p></div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
-  <b>事務ツール工房</b>（株式会社林材木店）<br>
-  〒437-1203 静岡県磐田市福田5490-47　担当：林<br>
-  TEL 0538-58-2395 ／ FAX 050-3146-7566 ／ info@hayazai.com
+  <b>事務ツール工房</b>（個人事業）　代表：林 大樹<br>
+  静岡県磐田市<br>
+  お問い合わせは上のフォーム・LINE・電話にて
 </div></footer>
 
 <script>
