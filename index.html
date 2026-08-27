@@ -26,6 +26,11 @@
   .hero p.lead{font-size:1.05rem;opacity:.95;margin-bottom:10px;}
   .hero p.sub{font-size:.9rem;opacity:.75;}
   .hero .cta{display:inline-block;margin-top:26px;background:#fff;color:var(--green-dark);font-weight:bold;font-size:1.05rem;padding:14px 34px;border-radius:999px;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.25);}
+  .hero .hero-img{margin-top:30px;}
+  .hero .hero-img img{width:100%;display:block;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.3);}
+  .pains-head{display:flex;align-items:center;gap:18px;margin-bottom:14px;}
+  .pains-head img{width:130px;flex-shrink:0;border-radius:12px;border:1px solid var(--line);background:#fff;}
+  @media(max-width:560px){.pains-head img{width:100px;}}
 
   section{padding:44px 0;}
   section:nth-of-type(even){background:#fff;}
@@ -106,14 +111,18 @@
   <p class="lead">先に作って持っていきます。触ってみて、使えそうなら購入。<br><strong>合わなければ 0円</strong>で終わりです。</p>
   <p class="sub">実家の材木店の事務と現場を自分でツール化して回している者が、同じものを近隣の会社にもお届けする個人サービスです。</p>
   <a class="cta" href="#form">困りごとを送る（1分）</a>
+  <div class="hero-img"><img src="assets/hero-office.jpg" alt="事務作業がラクになるイメージ"></div>
 </div></div>
 
 <section><div class="wrap">
   <h2>こんな事務作業、ありませんか</h2>
-  <p class="h2sub">1つでも当てはまったら、たぶんお役に立てます。</p>
+  <div class="pains-head">
+    <img src="assets/fax-cartoon.png" alt="書類に追われる事務員のイラスト">
+    <p class="h2sub" style="margin:0;padding:0;">1つでも当てはまったら、たぶんお役に立てます。</p>
+  </div>
   <div class="pains">
     <div class="pain">月末の請求書づくりに丸1日以上かかる</div>
-    <div class="pain">FAXで届いた注文をExcelに打ち直している</div>
+    <div class="pain">見積書や送り状を毎回一から作っている</div>
     <div class="pain">棚卸が紙と電卓のまま</div>
     <div class="pain">同じ数字を納品書・請求書・売上表に3回書いている</div>
     <div class="pain">現場の記録が手書き→あとで打ち直し</div>
@@ -144,9 +153,9 @@
     <div class="ba"><span class="before">紙に書く→電卓→Excelに打ち直し</span><span class="after">→ その場でスマホ入力・集計まで自動</span></div>
     <p class="desc">ボタンを押していくだけの入力。2人で数えて自動照合、数え間違いも見つかります。</p></div>
 
-  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>FAX注文の自動取込</b>
-    <div class="ba"><span class="before">届いたFAXを見ながら手で転記</span><span class="after">→ 自動で読み取って注文一覧へ</span></div>
-    <p class="desc">受信FAXを機械が監視してAIが読み取り。人は確認するだけ。</p></div>
+  <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>見積書ツール</b>
+    <div class="ba"><span class="before">毎回一から計算して手書き</span><span class="after">→ 商品と数量を選ぶだけで見積書</span></div>
+    <p class="desc">単価・割引・端数のルールを仕込んであるので、誰が作っても同じ見積りが出ます。</p></div>
 
   <div class="work"><span class="tag">株式会社林材木店で稼働中</span><b>毎朝の自動日報</b>
     <div class="ba"><span class="before">売上や在庫を聞かないと分からない</span><span class="after">→ 毎朝LINEに自動で届く</span></div>
@@ -165,7 +174,7 @@
   <h2>できること</h2>
   <p class="h2sub">上の実績と同じ仕組みを、御社の業務に合わせて作ります。</p>
   <div class="cards">
-    <div class="card"><b>紙・FAXをデータにする</b><p>FAXで届く注文や納品書を、打ち直しせずに一覧表へ。</p></div>
+    <div class="card"><b>見積書・帳票をパッと出す</b><p>選ぶだけで見積書や送り状が出るように。計算間違いもなくなります。</p></div>
     <div class="card"><b>転記をなくす</b><p>1回入力すれば、納品書も請求書も売上集計もぜんぶ出ます。</p></div>
     <div class="card"><b>現場をスマホで記録</b><p>棚卸・作業日報・点検を、その場でスマホ入力→自動集計。</p></div>
     <div class="card"><b>数字を毎朝1画面に</b><p>売上や在庫が毎朝自動でLINE・メールに届きます。</p></div>
@@ -219,7 +228,7 @@
     <div class="chips" id="chips">
       <span class="chip">請求書・納品書づくり</span>
       <span class="chip">棚卸・在庫管理</span>
-      <span class="chip">FAX注文の転記</span>
+      <span class="chip">見積書・帳票づくり</span>
       <span class="chip">毎日の集計・日報</span>
       <span class="chip">ホームページ</span>
       <span class="chip">その他・相談したい</span>
