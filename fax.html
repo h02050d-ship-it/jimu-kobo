@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>営業FAX 棚卸ツール</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Yu Gothic","Meiryo",sans-serif; color:#000; width:210mm; height:297mm; padding:12mm 14mm; }
+  .head { background:#000; color:#fff; text-align:center; padding:6mm 4mm; }
+  .head h1 { font-size:30pt; letter-spacing:.06em; line-height:1.3; }
+  .head p { font-size:12pt; margin-top:2mm; letter-spacing:.1em; }
+  .sub { text-align:center; font-size:13.5pt; font-weight:bold; margin:5mm 0 4mm; }
+  .sub .season { border-bottom:3px solid #000; padding-bottom:1mm; }
+
+  .features { display:flex; gap:4mm; margin-bottom:5mm; }
+  .feature { flex:1; border:2.5px solid #000; padding:3.5mm 3mm; text-align:center; }
+  .feature b { display:block; font-size:12pt; margin-bottom:1.5mm; }
+  .feature p { font-size:9.5pt; line-height:1.5; }
+
+  .offer { border:4px solid #000; padding:5mm 6mm; margin-bottom:5mm; }
+  .offer h2 { font-size:20pt; text-align:center; margin-bottom:3mm; letter-spacing:.05em; }
+  .flow { display:flex; align-items:stretch; gap:2mm; margin-bottom:3.5mm; }
+  .flow .box { flex:1; background:#eee; border:1.5px solid #000; text-align:center; padding:2.5mm 1mm; font-size:10pt; font-weight:bold; line-height:1.4; }
+  .flow .box small { display:block; font-weight:normal; font-size:8.5pt; }
+  .flow .arrow { display:flex; align-items:center; font-size:12pt; font-weight:bold; }
+  .offer .zero { text-align:center; font-size:12.5pt; font-weight:bold; }
+  .offer .zero span { background:#000; color:#fff; padding:1mm 3mm; }
+
+  .price { display:flex; justify-content:center; gap:6mm; align-items:center; margin:4mm 0 1mm; font-size:12pt; }
+  .price b { font-size:16pt; }
+  .maker { text-align:center; font-size:10.5pt; margin-bottom:5mm; }
+
+  .qr-block { display:flex; border:2.5px solid #000; margin-bottom:5mm; }
+  .qr-left { flex:1; padding:4mm 5mm; }
+  .qr-left h3 { font-size:13pt; margin-bottom:2mm; }
+  .qr-left p { font-size:10pt; line-height:1.7; }
+  .qr-left .url { font-size:9pt; margin-top:2mm; letter-spacing:.02em; }
+  .qr-right { width:44mm; border-left:2.5px solid #000; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3mm; }
+  .qr-right img { width:36mm; height:36mm; }
+  .qr-right p { font-size:8.5pt; font-weight:bold; margin-top:1mm; }
+
+  .others { background:#eee; border:1.5px solid #000; padding:3mm 5mm; font-size:10pt; margin-bottom:5mm; }
+  .others b { font-size:10.5pt; }
+
+  .footer { border-top:3px solid #000; padding-top:3mm; display:flex; justify-content:space-between; align-items:flex-end; }
+  .footer .co { font-size:10.5pt; line-height:1.7; }
+  .footer .co b { font-size:13pt; }
+  .footer .note { font-size:8pt; text-align:right; line-height:1.6; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>棚卸、まだ紙と電卓ですか？</h1>
+  <p>スマホでその場入力 → 集計まで自動</p>
+</div>
+
+<p class="sub"><span class="season">9月末の棚卸に間に合います</span></p>
+
+<div class="features">
+  <div class="feature"><b>打ち込みほぼ無し</b><p>ボタンを押していくだけの入力。現場で片手で終わります。</p></div>
+  <div class="feature"><b>数え間違いを発見</b><p>2人で数えて自動照合。ズレがあった所だけ教えます。</p></div>
+  <div class="feature"><b>集計も自動</b><p>事務所に戻ってExcelに打ち直す仕事が消えます。</p></div>
+</div>
+
+<div class="offer">
+  <h2>契約は、あとでいい。</h2>
+  <div class="flow">
+    <div class="box">無料で作って<br>お見せします</div>
+    <div class="arrow">▶</div>
+    <div class="box">1ヶ月ためす<small>（無料・調整2回まで）</small></div>
+    <div class="arrow">▶</div>
+    <div class="box">気に入ったら<br>購入</div>
+  </div>
+  <p class="zero">合わなければ <span>0円</span> で終わり。売り込みの電話もしません。</p>
+  <div class="price">料金：<b>初期 30,000円</b>＋<b>月 5,000円</b><span style="font-size:10pt;">（保守・質問し放題込み）</span></div>
+</div>
+
+<p class="maker">材木屋が自分の会社のために作り、毎回の棚卸で実際に使っているツールです。</p>
+
+<div class="qr-block">
+  <div class="qr-left">
+    <h3>くわしくは ➡ スマホでQRを読み取り</h3>
+    <p>ツールの中身・料金・申し込みフォームが見られます。<br>お電話でもどうぞ：<b style="font-size:13pt;">0538-58-2395</b>（林材木店・担当：林）<br>「事務ツールの件で」とお伝えください。</p>
+    <p class="url">https://h02050d-ship-it.github.io/jimu-kobo/</p>
+  </div>
+  <div class="qr-right"><img src="assets/qr-site.png" alt="QR"><p>カメラをかざすだけ</p></div>
+</div>
+
+<div class="others"><b>ほかにも：</b>請求書づくりの自動化（月末2日→30分）／ FAX注文の転記ゼロ化 ／ Excel整備 ／ ホームページ作成 — ぜんぶ「作ってから」お見せします。</div>
+
+<div class="footer">
+  <div class="co"><b>株式会社林材木店</b>　担当：林<br>静岡県磐田市福田5490-47　TEL 0538-58-2395 ／ FAX 050-3146-7566</div>
+  <div class="note">本FAXがご不要でしたら破棄してください。<br>送信停止をご希望の場合はお電話ください。</div>
+</div>
+
+</body>
+</html>

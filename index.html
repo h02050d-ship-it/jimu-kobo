@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事務ツール工房｜契約は、あとでいい。</title>
+<meta name="description" content="磐田の材木屋が自社で毎日使っている事務効率化ツールを、近隣の中小企業にも。先に作って持っていきます。触ってみて、使えそうなら購入。合わなければ0円。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%232e5339'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3E事%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --green:#2e5339; --green-dark:#1f3a27; --wood:#8a6d4b; --bg:#faf8f4;
+    --ink:#2b2b28; --muted:#6b6b64; --line:#e2ddd2; --accent:#c9552e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px;}
+  header.site{background:var(--green);color:#fff;padding:10px 0;}
+  header.site .wrap{display:flex;align-items:center;gap:10px;}
+  .logo{font-weight:bold;font-size:1.05rem;letter-spacing:.05em;}
+  .logo small{font-weight:normal;opacity:.8;margin-left:8px;font-size:.75rem;}
+
+  .hero{background:linear-gradient(175deg,var(--green) 55%,var(--green-dark));color:#fff;padding:56px 0 48px;}
+  .hero h1{font-size:2rem;line-height:1.4;letter-spacing:.04em;margin-bottom:18px;}
+  .hero p.lead{font-size:1.05rem;opacity:.95;margin-bottom:10px;}
+  .hero p.sub{font-size:.9rem;opacity:.75;}
+  .hero .cta{display:inline-block;margin-top:26px;background:#fff;color:var(--green-dark);font-weight:bold;font-size:1.05rem;padding:14px 34px;border-radius:999px;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.25);}
+
+  section{padding:44px 0;}
+  section:nth-of-type(even){background:#fff;}
+  h2{font-size:1.4rem;color:var(--green-dark);margin-bottom:6px;padding-left:12px;border-left:6px solid var(--green);}
+  .h2sub{color:var(--muted);font-size:.9rem;margin-bottom:24px;padding-left:18px;}
+
+  .steps{display:grid;gap:14px;margin-top:10px;}
+  .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 18px 18px 62px;position:relative;}
+  section:nth-of-type(even) .step{background:var(--bg);}
+  .step b{display:block;font-size:1.05rem;margin-bottom:4px;}
+  .step .num{position:absolute;left:16px;top:18px;width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:bold;display:flex;align-items:center;justify-content:center;font-size:1.05rem;}
+  .step p{font-size:.92rem;color:var(--muted);}
+  .step .free{color:var(--accent);font-weight:bold;font-size:.85rem;}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:560px){.cards{grid-template-columns:1fr;}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;}
+  section:nth-of-type(even) .card{background:var(--bg);}
+  .card b{display:block;color:var(--green-dark);margin-bottom:4px;font-size:1rem;}
+  .card p{font-size:.87rem;color:var(--muted);}
+  .proof{margin-top:18px;background:var(--green);color:#fff;border-radius:12px;padding:16px 18px;font-size:.95rem;}
+
+  table.price{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:.92rem;}
+  table.price th,table.price td{border:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top;}
+  table.price th{background:var(--green);color:#fff;font-weight:bold;white-space:nowrap;}
+  table.price td.price-col{white-space:nowrap;font-weight:bold;color:var(--green-dark);}
+  .price-note{margin-top:14px;background:#fff;border:2px solid var(--green);border-radius:12px;padding:14px 16px;font-size:.9rem;}
+  .price-note b{color:var(--accent);}
+
+  ul.plain{list-style:none;}
+  ul.plain li{padding:10px 0 10px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem;}
+  ul.plain li::before{content:"✓";position:absolute;left:4px;color:var(--green);font-weight:bold;}
+  ul.ng li::before{content:"✕";color:var(--accent);}
+
+  .form-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;}
+  .form-box label{display:block;font-weight:bold;margin:18px 0 6px;font-size:.95rem;}
+  .form-box label .req{color:var(--accent);font-size:.8rem;margin-left:6px;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:.92rem;cursor:pointer;user-select:none;}
+  .chip.on{border-color:var(--green);background:var(--green);color:#fff;font-weight:bold;}
+  input[type=text],input[type=tel],textarea{width:100%;border:2px solid var(--line);border-radius:10px;padding:12px;font-size:1rem;font-family:inherit;background:#fff;}
+  input:focus,textarea:focus{outline:none;border-color:var(--green);}
+  .send{width:100%;margin-top:22px;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:16px;font-size:1.1rem;font-weight:bold;cursor:pointer;font-family:inherit;}
+  .send:disabled{opacity:.5;}
+  .form-msg{margin-top:14px;font-size:.95rem;display:none;border-radius:10px;padding:14px;}
+  .form-msg.ok{display:block;background:#e8f2ea;color:var(--green-dark);border:1px solid var(--green);}
+  .form-msg.ng{display:block;background:#fbeae4;color:#8a3218;border:1px solid var(--accent);}
+
+  .alt{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media(max-width:560px){.alt{grid-template-columns:1fr;}}
+  .alt-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;font-size:.92rem;}
+  .alt-box img{width:130px;height:130px;margin:8px auto 4px;display:block;}
+  .alt-box a.telbtn{display:inline-block;margin-top:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:bold;padding:10px 22px;border-radius:999px;}
+
+  footer{background:var(--green-dark);color:#fff;padding:30px 0;font-size:.85rem;line-height:2;}
+  footer a{color:#fff;}
+</style>
+</head>
+<body>
+
+<header class="site"><div class="wrap"><span class="logo">事務ツール工房<small>by 株式会社林材木店（磐田市）</small></span></div></header>
+
+<div class="hero"><div class="wrap">
+  <h1>契約は、<br>あとでいい。</h1>
+  <p class="lead">先に作って持っていきます。触ってみて、使えそうなら購入。<br><strong>合わなければ 0円</strong>で終わりです。</p>
+  <p class="sub">磐田の材木屋が、自分の会社のために作って毎日使っている事務効率化ツールを、近隣の会社にもお分けします。</p>
+  <a class="cta" href="#form">困りごとを送る（1分）</a>
+</div></div>
+
+<section><div class="wrap">
+  <h2>ながれ</h2>
+  <p class="h2sub">訪問営業も、分厚い見積書もありません。</p>
+  <div class="steps">
+    <div class="step"><span class="num">1</span><b>困りごとを送る <span class="free">（1分・無料）</span></b><p>下のフォームかLINEで「請求書づくりが大変」「棚卸が紙のまま」など、一言で大丈夫です。</p></div>
+    <div class="step"><span class="num">2</span><b>こちらで作ります <span class="free">（無料）</span></b><p>お話を聞いて、実際に動くものを作ってお見せします。パンフレットではなく実物です。</p></div>
+    <div class="step"><span class="num">3</span><b>1ヶ月ためす <span class="free">（無料・調整2回まで）</span></b><p>実際の業務で使ってみてください。合わなければそのまま終了、費用はかかりません。</p></div>
+    <div class="step"><span class="num">4</span><b>気に入ったら購入</b><p>使えそうだと思ってから、はじめて契約とお支払いです。</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>できること</h2>
+  <p class="h2sub">ぜんぶ、自社（材木店）で毎日実際に使っているものです。</p>
+  <div class="cards">
+    <div class="card"><b>紙・FAXをデータにする</b><p>FAXで届く注文や納品書を、打ち直しせずに一覧表へ。</p></div>
+    <div class="card"><b>転記をなくす</b><p>1回入力すれば、納品書も請求書も売上集計もぜんぶ出ます。月末の請求書作業が2日→30分に。</p></div>
+    <div class="card"><b>現場をスマホで記録</b><p>棚卸・作業日報・点検を、その場でスマホ入力→自動集計。紙をExcelに打ち直す仕事が消えます。</p></div>
+    <div class="card"><b>数字を毎朝1画面に</b><p>売上や在庫が毎朝自動でLINE・メールに届く。聞かなくても分かる状態に。</p></div>
+    <div class="card"><b>期日の見張り番</b><p>支払・更新・提出物のうっかり忘れを、機械が見張って知らせます。</p></div>
+    <div class="card"><b>Excel・ホームページ作成</b><p>ぐちゃぐちゃのExcelの整備や、古くなったホームページの作り直しも。</p></div>
+  </div>
+  <div class="proof">🌲 材木店の現場と事務所で毎日動いている実物を、そのままお見せできます。「うちの場合はこういうことできる？」もお気軽に。</div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>料金</h2>
+  <p class="h2sub">先に全部書いておきます。この4つの型しかありません。</p>
+  <table class="price">
+    <tr><th>① Excel・スプシ整備</th><td>集計表・管理表・帳票づくり。ファイルをお渡しして完了。</td><td class="price-col">1〜5万円<br><small>買い切り</small></td></tr>
+    <tr><th>② 業務ツール</th><td>スマホ棚卸・自動集計・通知など「動く仕組み」。</td><td class="price-col">初期3万円<br>＋月5,000円</td></tr>
+    <tr><th>③ 転記ゼロ化</th><td>1回入力で納品書・請求書・売上集計まで全部。</td><td class="price-col">初期5万円<br>＋月1万円</td></tr>
+    <tr><th>④ ホームページ</th><td>作成・リニューアル＋お知らせ更新の代行。</td><td class="price-col">5〜10万円<br>＋月3,000円〜</td></tr>
+  </table>
+  <div class="price-note">
+    <b>デモ作成・1ヶ月試用・調整2回まで＝無料。合わなければ0円。</b><br>
+    月額は「壊れたら直す＋質問し放題」の保守料です。正式なお見積りは、動くものをお見せするときに1枚でお渡しします。
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>さきにお伝えしていること</h2>
+  <p class="h2sub">あとから「話が違う」にならないように。</p>
+  <ul class="plain">
+    <li>最初から100点のシステムはありません。<b>70点でお渡しして、使いながら90点に育てる</b>やり方です。そのための無料試用と調整です。</li>
+    <li>最初の1回は、いまのやり方（紙など）と並走してください。合っていることをご自分の目で確かめてから切り替えるのが安全です。</li>
+    <li>自動化やAIは「下書き」までです。<b>最終確認は必ず人が行う</b>設計にしています。勝手に確定しません。</li>
+    <li>本業（材木店）と並行のため、対応が翌日以降になることがあります。「止まると今日困る」業務はお受けしていません。</li>
+  </ul>
+</div></section>
+
+<section><div class="wrap">
+  <h2>対象と、お受けできないこと</h2>
+  <p class="h2sub">対象：静岡県西部（磐田・袋井・浜松・掛川あたり）の中小企業</p>
+  <ul class="plain ng">
+    <li>決済・振込など、お金が直接動く仕組み</li>
+    <li>給与・マイナンバーなど、個人情報を扱うもの</li>
+    <li>他社が作った既存システムの改修（かわりに「隣に新しく作る」ご提案をします）</li>
+    <li>24時間止められない業務</li>
+  </ul>
+</div></section>
+
+<section id="form"><div class="wrap">
+  <h2>困りごとを送る</h2>
+  <p class="h2sub">1分で終わります。折り返し、こちらから電話かLINEでご連絡します。</p>
+  <div class="form-box">
+    <label>いちばん面倒な事務作業はどれですか？<span class="req">どれか1つ</span></label>
+    <div class="chips" id="chips">
+      <span class="chip">請求書・納品書づくり</span>
+      <span class="chip">棚卸・在庫管理</span>
+      <span class="chip">FAX注文の転記</span>
+      <span class="chip">毎日の集計・日報</span>
+      <span class="chip">ホームページ</span>
+      <span class="chip">その他・相談したい</span>
+    </div>
+    <label>会社名<span class="req">必須</span></label>
+    <input type="text" id="f-company" placeholder="例）株式会社○○">
+    <label>お名前</label>
+    <input type="text" id="f-name" placeholder="例）山田">
+    <label>電話番号<span class="req">必須</span></label>
+    <input type="tel" id="f-tel" placeholder="例）0538-00-0000">
+    <label>ひとことメモ（任意）</label>
+    <textarea id="f-memo" rows="3" placeholder="例）月末の請求書に2日かかっている／棚卸がぜんぶ手書き　など"></textarea>
+    <button class="send" id="send">この内容で送る</button>
+    <div class="form-msg" id="msg"></div>
+  </div>
+
+  <div class="alt">
+    <div class="alt-box"><b>LINEのほうが楽な方</b><img src="assets/qr-line.png" alt="LINE友だち追加QR"><a href="https://lin.ee/tGamtbg">友だち追加して話す</a></div>
+    <div class="alt-box"><b>電話のほうが早い方</b><p style="margin-top:8px;">平日 8:00〜16:00</p><a class="telbtn" href="tel:0538-58-2395">0538-58-2395</a><p style="margin-top:8px;color:var(--muted);font-size:.8rem;">「事務ツールの件で」とお伝えください</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>事務ツール工房</b>（株式会社林材木店）<br>
+  〒437-1203 静岡県磐田市福田5490-47　担当：林<br>
+  TEL 0538-58-2395 ／ FAX 050-3146-7566 ／ info@hayazai.com
+</div></footer>
+
+<script>
+const GAS_URL = 'https://script.google.com/macros/s/AKfycby2MBdQbjlopT6HmhaQAna9eycWboETTOoIgNJoNrwTj0WzKs66nC5pY1nZZQTJldXT/exec';
+let category = '';
+document.getElementById('chips').addEventListener('click', e => {
+  if (!e.target.classList.contains('chip')) return;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  e.target.classList.add('on');
+  category = e.target.textContent;
+});
+document.getElementById('send').addEventListener('click', async () => {
+  const company = document.getElementById('f-company').value.trim();
+  const tel = document.getElementById('f-tel').value.trim();
+  const msg = document.getElementById('msg');
+  msg.className = 'form-msg';
+  if (!company || !tel) {
+    msg.className = 'form-msg ng';
+    msg.textContent = '会社名と電話番号を入れてください（折り返しに必要です）。';
+    return;
+  }
+  const btn = document.getElementById('send');
+  btn.disabled = true; btn.textContent = '送信中…';
+  try {
+    const r = await fetch(GAS_URL, {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain'},
+      body: JSON.stringify({
+        key: 'jimu2026',
+        category: category,
+        company: company,
+        name: document.getElementById('f-name').value.trim(),
+        tel: tel,
+        memo: document.getElementById('f-memo').value.trim()
+      })
+    });
+    const j = await r.json();
+    if (!j.ok) throw new Error(j.err || 'ng');
+    msg.className = 'form-msg ok';
+    msg.textContent = '✅ 受け付けました。内容を見て、まず「動くもの」を作ってご連絡します（2〜3営業日）。';
+    btn.textContent = '送信しました';
+  } catch (err) {
+    msg.className = 'form-msg ng';
+    msg.textContent = '送信できませんでした。お手数ですが、お電話（0538-58-2395）かLINEでご連絡ください。';
+    btn.disabled = false; btn.textContent = 'この内容で送る';
+  }
+});
+</script>
+</body>
+</html>
