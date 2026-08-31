@@ -6,26 +6,26 @@
 <style>
   @page { size: A4; margin: 0; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:"Yu Gothic","Meiryo",sans-serif; color:#000; width:210mm; height:297mm; padding:9mm 12mm; overflow:hidden; }
-  .head { background:#000; color:#fff; text-align:center; padding:4mm 4mm; }
-  .head h1 { font-size:24pt; letter-spacing:.06em; line-height:1.3; }
+  body { font-family:"Yu Gothic","Meiryo",sans-serif; color:#000; width:210mm; height:297mm; padding:7mm 11mm; overflow:hidden; }
+  .head { background:#000; color:#fff; text-align:center; padding:3mm 4mm; }
+  .head h1 { font-size:22pt; letter-spacing:.06em; line-height:1.3; }
   .head p { font-size:11pt; margin-top:1.5mm; letter-spacing:.08em; }
 
-  .checks { border:2.5px solid #000; padding:3mm 5mm; margin:3.5mm 0; }
+  .checks { border:2.5px solid #000; padding:2.5mm 4mm; margin:2.5mm 0; }
   .checks .inner { display:flex; gap:4mm; align-items:center; }
   .checks .txt { flex:1; }
-  .checks .pic { width:27mm; flex-shrink:0; }
+  .checks .pic { width:24mm; flex-shrink:0; }
   .checks .pic img { width:100%; display:block; }
-  .checks h2 { font-size:12.5pt; margin-bottom:2mm; }
+  .checks h2 { font-size:11.5pt; margin-bottom:1.5mm; }
   .checks ul { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:1.5mm 5mm; }
-  .checks li { font-size:10pt; padding-left:6mm; position:relative; line-height:1.55; }
+  .checks li { font-size:9.5pt; padding-left:5.5mm; position:relative; line-height:1.45; }
   .checks li::before { content:"☑"; position:absolute; left:0; font-size:10.5pt; font-weight:bold; }
-  .checks .hit { text-align:center; font-size:10.5pt; font-weight:bold; margin-top:2mm; background:#eee; border:1.5px solid #000; padding:1mm; }
+  .checks .hit { text-align:center; font-size:10pt; font-weight:bold; margin-top:1.5mm; background:#eee; border:1.5px solid #000; padding:.8mm; }
 
-  .offer { border:4px solid #000; padding:3.5mm 6mm; margin-bottom:3mm; }
-  .offer h2 { font-size:18pt; text-align:center; margin-bottom:2.5mm; letter-spacing:.05em; }
+  .offer { border:4px solid #000; padding:2.5mm 5mm; margin-bottom:2.5mm; }
+  .offer h2 { font-size:16pt; text-align:center; margin-bottom:2mm; letter-spacing:.05em; }
   .flow { display:flex; align-items:stretch; gap:2mm; margin-bottom:2.5mm; }
-  .flow .box { flex:1; background:#eee; border:1.5px solid #000; text-align:center; padding:2.5mm 1mm; font-size:10pt; font-weight:bold; line-height:1.4; }
+  .flow .box { flex:1; background:#eee; border:1.5px solid #000; text-align:center; padding:2mm 1mm; font-size:9.5pt; font-weight:bold; line-height:1.35; }
   .flow .box small { display:block; font-weight:normal; font-size:8.5pt; }
   .flow .arrow { display:flex; align-items:center; font-size:12pt; font-weight:bold; }
   .offer .zero { text-align:center; font-size:11.5pt; font-weight:bold; }
@@ -33,18 +33,18 @@
   .offer .price-line { text-align:center; font-size:10pt; margin-top:2mm; }
   .offer .price-line b { font-size:11.5pt; }
 
-  .jisseki { border:2.5px solid #000; margin-bottom:3mm; }
-  .jisseki .bar { background:#000; color:#fff; font-size:10.5pt; font-weight:bold; padding:1mm 4mm; }
-  .jisseki .body { padding:2mm 5mm; font-size:9.5pt; line-height:1.7; }
+  .jisseki { border:2.5px solid #000; margin-bottom:2.5mm; }
+  .jisseki .bar { background:#000; color:#fff; font-size:10pt; font-weight:bold; padding:.8mm 4mm; }
+  .jisseki .body { padding:1.5mm 4mm; font-size:9pt; line-height:1.6; }
   .jisseki .body b { font-size:10.5pt; }
 
-  .qr-block { display:flex; border:2.5px solid #000; margin-bottom:3mm; }
-  .qr-left { flex:1; padding:3mm 5mm; }
+  .qr-block { display:flex; border:2.5px solid #000; margin-bottom:2.5mm; }
+  .qr-left { flex:1; padding:2.5mm 4mm; }
   .qr-left h3 { font-size:12pt; margin-bottom:1.5mm; }
-  .qr-left p { font-size:9.5pt; line-height:1.65; }
+  .qr-left p { font-size:9pt; line-height:1.55; }
   .qr-left .url { font-size:8.5pt; margin-top:1.5mm; letter-spacing:.02em; }
-  .qr-right { width:42mm; border-left:2.5px solid #000; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2.5mm; }
-  .qr-right img { width:33mm; height:33mm; }
+  .qr-right { width:39mm; border-left:2.5px solid #000; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:2.5mm; }
+  .qr-right img { width:30mm; height:30mm; }
   .qr-right p { font-size:8.5pt; font-weight:bold; margin-top:1mm; }
 
   .footer { border-top:3px solid #000; padding-top:3mm; display:flex; justify-content:space-between; align-items:flex-end; }
@@ -57,7 +57,7 @@
 
 <div class="head">
   <h1>その事務作業、<br>効率化しませんか？</h1>
-  <p>打ち直し・転記・手書き集計を、なくします</p>
+  <p>パソコンでできる作業は機械に。人にしかできない仕事に時間を</p>
 </div>
 
 <div class="checks">
@@ -89,7 +89,8 @@
   </div>
   <p class="zero">合わなければ <span>0円</span> で終わり。売り込みの電話もしません。</p>
   <p class="price-line">料金の目安：Excel整備 <b>1万円〜</b>（買い切り）／ 業務ツール <b>初期3万円＋月5,000円</b>（保守込み）</p>
-  <p style="text-align:center;font-size:9pt;margin-top:1.5mm;line-height:1.6;"><b>安い理由：</b>①材木店が本業なのでこれで稼ぐ必要がない　②AIの発展で作る手間が下がった　③私にとって実績と勉強になる<br><b>社外の実績が少ない今が一番安い時期です。</b>今後の新規は値上げしますが、ご契約中の月額は上げません。<br>サーバー契約は不要（月々のサーバー代0円）。解約されても道具はそのまま残ります。</p>
+  <p style="text-align:center;font-size:8.5pt;margin-top:1.2mm;line-height:1.5;"><b>安い理由：</b>①材木店が本業なのでこれで稼ぐ必要がない　②AIの発展で作る手間が下がった　③実績と勉強になる　④訪問営業をしない<br><b>社外の実績が少ない今が一番安い時期です。</b>今後の新規は値上げしますが、ご契約中の月額は上げません。<br>サーバー契約は不要（月々のサーバー代0円）。契約の縛りなし・いつでも解約可。</p>
+  <p style="text-align:center;font-size:8.5pt;margin-top:1.2mm;line-height:1.5;border-top:1px solid #000;padding-top:1.5mm;"><b>お約束：</b>ドメインはお客様名義／データはお客様のもの（持ち出し自由）／<b>解約後も道具はそのまま動きます</b>（止まるのはサポートだけ）／検索順位の保証はしません</p>
 </div>
 
 <div class="jisseki">

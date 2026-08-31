@@ -84,6 +84,11 @@
   .honest ol.reasons li{position:relative;padding:10px 0 10px 40px;border-bottom:1px dashed var(--line);font-size:.95rem;counter-increment:r;}
   .honest ol.reasons li:last-child{border-bottom:none;}
   .honest ol.reasons li::before{content:counter(r);position:absolute;left:4px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:.8rem;font-weight:bold;display:flex;align-items:center;justify-content:center;}
+  table.promise{width:100%;border-collapse:collapse;background:#fff;font-size:.9rem;min-width:520px;}
+  table.promise th,table.promise td{border:1px solid var(--line);padding:11px 12px;text-align:left;vertical-align:top;}
+  table.promise th{background:var(--green);color:#fff;font-weight:bold;}
+  table.promise th:first-child{background:#8a8a80;}
+  table.promise td:first-child{color:var(--muted);background:#f6f4ef;width:46%;}
   ul.plain{list-style:none;}
   ul.plain li{padding:10px 0 10px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem;}
   ul.plain li::before{content:"✓";position:absolute;left:4px;color:var(--green);font-weight:bold;}
@@ -124,6 +129,17 @@
   <a class="cta" href="#form">困りごとを送る（1分）</a>
   <div class="hero-img"><img src="assets/hero-office.jpg" alt="事務作業がラクになるイメージ"></div>
 </div></div>
+
+<section><div class="wrap">
+  <h2>パソコンでできることは、機械にやらせましょう</h2>
+  <p class="h2sub">効率化そのものが目的ではありません。時間の使い道を変えるためです。</p>
+  <div class="honest">
+    <p>AIのおかげで、こうしたツールを作るのは爆速になりました。ただ、<b>最低限のITの知識がないと事故ります</b>（データが消える、情報が漏れる、など）。だから「便利らしいけど、うちには無理」で止まっている会社がほとんどです。</p>
+    <p class="big">その部分は、私がやります。</p>
+    <p>打ち直し・転記・集計のような<b>パソコンでできる作業は機械に任せて、人にしかできない仕事に時間を使ってください。</b>お客様と話すこと、現場を見ること、段取りや次の手を考えること——本当に大事なのは、そちらのはずです。</p>
+    <p>パソコンが苦手でも構いません。使う人がやるのは「ボタンを押す」「数字を入れる」くらいになるように作ります。</p>
+  </div>
+</div></section>
 
 <section><div class="wrap">
   <h2>こんな事務作業、ありませんか</h2>
@@ -224,6 +240,7 @@
       <li><b>本業があります。</b>材木店が本業なので、これで生活費を稼ぐ必要がありません。だから相場を気にせず値段を決められます。</li>
       <li><b>作る手間が下がりました。</b>AIの発展で、以前なら数十万円かかった開発が現実的な手間でできるようになりました。</li>
       <li><b>私にとっては実績と勉強になります。</b>他社の事務を見せていただくこと自体が学びで、それが値段の一部を負担しているようなものです。</li>
+      <li><b>訪問も打ち合わせもしません。</b>やりとりは基本メール・LINE・電話だけ。移動時間も営業の手間もかからないぶん、安くできます。お客様の側も、営業に来られて断りづらい思いをすることがありません。</li>
     </ol>
     <p>正直に言うと、社外への提供実績がまだ少ないので、<span class="big">今が一番安い時期</span>です。実績が増えれば新しくお受けする価格は上げていくと思います。<br>
     <b>ただし、一度ご契約いただいた方の月額は上げません。</b>始めた時の金額のまま続けていただけます。</p>
@@ -234,6 +251,23 @@
     <p>・<b>サーバーの契約は要りません。</b>月々のレンタルサーバー代は0円です（データはお客様のGoogleアカウントの中に置きます）。</p>
     <p>・<b>データはお客様のものです。</b>こちらでお預かりしません。</p>
     <p>・<b>解約しても、道具はそのまま残ります。</b>止まるのはサポートだけです。使えなくして縛るようなことはしません。</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>お約束していること</h2>
+  <p class="h2sub">この業界でよく聞くトラブルです。うちはこうしています。</p>
+  <div style="overflow-x:auto">
+    <table class="promise">
+      <tr><th>よくあるトラブル</th><th>事務ツール工房のルール</th></tr>
+      <tr><td>ドメイン（ホームページの住所）が制作会社の名義。解約するとURLごと使えなくなる</td><td><b>ドメインは必ずお客様名義</b>で取得します。取得もお客様の画面で一緒に行います</td></tr>
+      <tr><td>データが業者のサーバーの中。解約したら中身を取り出せない</td><td><b>データはお客様のGoogleスプレッドシートそのもの</b>。いつでも開けて、持ち出せます</td></tr>
+      <tr><td>解約した瞬間にツールが止まる</td><td><b>解約後も道具はそのまま動きます。</b>止まるのはサポートだけです</td></tr>
+      <tr><td>中身がブラックボックスで、他の人が触れない（乗り換えられない）</td><td>中身はスプレッドシートとGoogleの標準機能です。<b>他の方でも引き継げます</b></td></tr>
+      <tr><td>最低利用期間・年契約の縛り、途中解約に違約金</td><td><b>縛りはありません。</b>月単位で、いつでもおやめいただけます</td></tr>
+      <tr><td>「保守費」の中身が不明。追加を頼むたびに言い値の見積り</td><td>月額に含むもの（故障対応・質問対応）と別料金になるもの（新機能）を<b>先に1枚でお渡しします</b></td></tr>
+      <tr><td>「検索で1位にします」と成果を約束する</td><td><b>検索順位はお約束しません。</b>誰にも保証できないことなので言いません</td></tr>
+    </table>
   </div>
 </div></section>
 
