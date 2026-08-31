@@ -80,6 +80,10 @@
   .honest .big{font-size:1.05rem;font-weight:bold;color:var(--green-dark);}
   .honest .strike{color:var(--muted);}
   .honest .strike s{text-decoration-color:var(--accent);text-decoration-thickness:2px;}
+  .honest ol.reasons{margin:0 0 14px;padding-left:0;list-style:none;counter-reset:r;}
+  .honest ol.reasons li{position:relative;padding:10px 0 10px 40px;border-bottom:1px dashed var(--line);font-size:.95rem;counter-increment:r;}
+  .honest ol.reasons li:last-child{border-bottom:none;}
+  .honest ol.reasons li::before{content:counter(r);position:absolute;left:4px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:.8rem;font-weight:bold;display:flex;align-items:center;justify-content:center;}
   ul.plain{list-style:none;}
   ul.plain li{padding:10px 0 10px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem;}
   ul.plain li::before{content:"✓";position:absolute;left:4px;color:var(--green);font-weight:bold;}
@@ -214,8 +218,15 @@
     <p class="strike">こうした業務ツールは、システム会社に頼むと<s>数十万〜100万円以上</s>かかってきました。その大半は、プログラマーの人件費です。</p>
     <p>いまはAIの発展で、作る手間が大きく下がりました。専門のプログラマーでなくても、<b>業務そのものを分かっている人間が、自分でツールを作れる時代</b>になったんです。私は実家の材木店のツールを全部この方法で作り、毎日現場で運用しています。</p>
     <p>ただし、最低限のITの知識がないと事故ります（データが消える、情報が漏れる、など）。そこは自社で毎日作っては直してきた経験でカバーしています。とくにデータの扱いは慎重にやっています。</p>
-    <p>そして正直なところ、社外への提供実績はまだ少ないです。<span class="big">だから、今は安くしています。</span></p>
     <p>それと、私も同じ小さな会社を経営している側です。数十万円を出す決断がどれだけ重いか、「効率化」と言われてもピンとこない気持ちも、実感として分かります。だから最初にお金を出させない形にしました。</p>
+    <p class="big" style="margin-bottom:8px">安くできる理由は、この3つです。</p>
+    <ol class="reasons">
+      <li><b>本業があります。</b>材木店が本業なので、これで生活費を稼ぐ必要がありません。だから相場を気にせず値段を決められます。</li>
+      <li><b>作る手間が下がりました。</b>AIの発展で、以前なら数十万円かかった開発が現実的な手間でできるようになりました。</li>
+      <li><b>私にとっては実績と勉強になります。</b>他社の事務を見せていただくこと自体が学びで、それが値段の一部を負担しているようなものです。</li>
+    </ol>
+    <p>正直に言うと、社外への提供実績がまだ少ないので、<span class="big">今が一番安い時期</span>です。実績が増えれば新しくお受けする価格は上げていくと思います。<br>
+    <b>ただし、一度ご契約いただいた方の月額は上げません。</b>始めた時の金額のまま続けていただけます。</p>
     <p>口で言っても伝わらないので、「作って、触ってもらって、気に入らなければ0円」にしています。安さの理由も、腕のほども、実物で確かめてください。</p>
   </div>
   <div class="honest" style="margin-top:14px">
